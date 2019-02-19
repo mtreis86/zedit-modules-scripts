@@ -1,0 +1,12 @@
+{
+  "id": "ExperiencePatcher",
+  "name": "Experience Kills Patcher",
+  "author": "mtreis86",
+  "version": "1.0.0",
+  "released": "02/18/2019",
+  "updated": "02/18/2019",
+  "description": "Export the races csv list for experience to work with kills enabled.",
+  "requires": ["unifiedPatchingFramework"],
+  "moduleLoader": "UPF",
+  "canHotLoad": true
+}
