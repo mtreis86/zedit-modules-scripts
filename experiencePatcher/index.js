@@ -18,7 +18,7 @@ registerPatcher({
                         }
                     helpers.logMessage("Processing " + xelib.LongName(record));
                     let entry = new String("".concat(xelib.GetValue(record, "EDID - Editor ID"), "\;",
-                                                     xelib.GetValue(record, "DATA\\Starting Health"), "\n"));
+                                                     math.round(xelib.GetValue(record, "DATA\\Starting Health")), "\n"));
                     locals.entries.push(entry);
                 }
             })
