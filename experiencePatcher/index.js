@@ -17,8 +17,8 @@ registerPatcher({
                         return false;
                         }
                     helpers.logMessage("Processing " + xelib.LongName(record));
-                    let entry = new String("".concat(xelib.GetValue(record, "EDID - Editor ID"), "\;",
-                                                     math.round(xelib.GetValue(record, "DATA\\Starting Health")), "\n"));
+                    let entry = new String("".concat(xelib.GetValue(record, "EDID - Editor ID"), "\,",
+                                                     Math.round(xelib.GetValue(record, "DATA\\Starting Health")), "\n"));
                     locals.entries.push(entry);
                 }
             })
@@ -27,7 +27,7 @@ registerPatcher({
             let outputText = new String (locals.entries);
             let dataPath = xelib.GetGlobal('DataPath');
             let filePath = fh.jetpack.path(dataPath, 'SKSE', 'Plugins', 'Experience', 'Races', 'experiencePatch.csv');
-            fh.saveTextFile(filePath, outputText.replace(/\,/g, ""));
+            fh.saveTextFile(filePath, outputText.replace(/\n\,/g, "\n"));
         }
     })
 });
